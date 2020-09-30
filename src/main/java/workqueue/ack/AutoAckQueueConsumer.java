@@ -62,6 +62,7 @@ public class AutoAckQueueConsumer {
      */
     private static void doWork(String msg) {
         try {
+            System.out.println("消费到消息: " + msg);
             // 通过sleep()来模拟需要耗时的操作
             if ("sleep".equals(msg)) {
                 Thread.sleep(2000 * 60);
